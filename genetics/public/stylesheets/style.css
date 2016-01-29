@@ -1,27 +1,32 @@
 body {
-  padding: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
   color: #00B7FF;
 }
+header {
+  color: black;
+  padding-bottom: 15px;
+  padding-top: 10px;
+}
 
+button {
+  font-size: 16px;
+}
 .parents{
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
 }
 .parent1{
-  /*background-color: brown;*/
-  width: 50%;
   display: flex;
   justify-content: space-between;
 }
 
 .parent2{
-  /*background-color: blue;*/
-  width: 50%;
   display: flex;
   justify-content: space-between;
 }
@@ -30,6 +35,10 @@ a {
   justify-content: space-between;
 }
 .child{
+  display: flex;
+  justify-content: center;
+}
+.offspring {
   display: flex;
   justify-content: center;
 }
