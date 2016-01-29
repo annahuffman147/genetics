@@ -18,21 +18,26 @@
 
   </header>
   <main>
-    <div>
+    <div class="buttons">
       <button type="button" class="btn btn-primary btn-sm" ng-click="getRandomParent()">Randomize Parent</button>
+      <button type="button" class="btn btn-primary btn-sm" ng-click="getRandomParent2()">Randomize Parent2</button>
     </div>
+
     <div class="parents">
       <div class="container parent1">
         <img ng-src="{{currentImage}}">
       </div>
       <div class="container parent2">
+        <img ng-src="{{currentImage2}}">
       </div>
     </div>
-    <div class="container">
-      <div class="offspring">
-        <!-- <button type="button" class="btn btn-success btn-sm">Make Babies</button> -->
-      </div>
+    <div class="child">
+      <button type="button" class="btn btn-success btn-sm" ng-click="makeBabies(); toggleAddChildShow()">Make Babies</button>
     </div>
+      <div class="offspring" ng-show="addChildShow">
+        <img ng-src="{{currentImage3}}">
+      </div>
+
   </main>
   <footer>
 

@@ -49,6 +49,29 @@ $scope.getRandomParent = function() {
   $scope.currentImage = image
 
 }
+
+$scope.getRandomParent2 = function() {
+
+  var randomNumber = Math.floor((Math.random() * $scope.parents.length))
+  var image = $scope.parents[randomNumber].image
+  console.log(image);
+  $scope.currentImage2 = image
+
+}
+$scope.makeBabies = function(){
+  var randomNumber = Math.floor((Math.random() * $scope.parents.length))
+  var image = $scope.parents[randomNumber].image
+  console.log(image);
+  $scope.currentImage3 = image
+}
+$scope.addChildShow = false;
+$scope.toggleAddChildShow = function() {
+  $scope.addChildShow = !$scope.addChildShow;
+};
 $scope.getRandomParent()
+$scope.getRandomParent2()
+$scope.makeBabies()
+// $scope.toggleAddChildShow()
+
 
 })

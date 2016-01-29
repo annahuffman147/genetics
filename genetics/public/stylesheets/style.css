@@ -13,15 +13,23 @@ a {
   align-items: flex-start;
 }
 .parent1{
-  background-color: brown;
+  /*background-color: brown;*/
   width: 50%;
-  height: 50px;
   display: flex;
+  justify-content: space-between;
 }
 
 .parent2{
-  background-color: blue;
+  /*background-color: blue;*/
   width: 50%;
-  height: 50px;
   display: flex;
+  justify-content: space-between;
+}
+.buttons{
+  display: flex;
+  justify-content: space-between;
+}
+.child{
+  display: flex;
+  justify-content: center;
 }
