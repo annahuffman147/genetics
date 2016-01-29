@@ -1,30 +1,54 @@
 var app = angular.module("genetics", []);
 
-app.contoller('parents', function($scope){
-  $scope.creatures = {
-    redOneEye: "images/redOneEye.png"
-    redTwoEye: "images/redTwoEye.png"
-    redThreeEye: "images/redThreeEye.png"
-    blueOneEye: "images/blueOneEye.png"
-    blueTwoEye: "images/blueTwoEye.png"
-    blueThreeEye: "images/blueThreeEye.png"
-    yellowOneEye: "images/yellowOneEye.png"
-    yellowTwoeye: "images/yellowTwoeye.png"
-    yellowThreeEye: "images/yellowThreeEye.png"
-  }
-  $scope.children = {
-    redOneEye: "images/redOneEye.png"
-    redTwoEye: "images/redTwoEye.png"
-    redThreeEye: "images/redThreeEye.png"
-    blueOneEye: "images/blueOneEye.png"
-    blueTwoEye: "images/blueTwoEye.png"
-    blueThreeEye: "images/blueThreeEye.png"
-    yellowOneEye: "images/yellowOneEye.png"
-    yellowTwoeye: "images/yellowTwoeye.png"
-    yellowThreeEye: "images/yellowThreeEye.png"
-  }
+app.controller('parents', function($scope) {
+  $scope.parents = [{
+      image: "images/redOneEye.png"
+    }, {
+      image: "images/redTwoEye.png"
+    }, {
+      image: "images/redThreeEye.png"
+    }, {
+      image: "images/blueOneEye.png"
+    }, {
+      image: "images/blueTwoEye.png"
+    }, {
+      image: "images/blueThreeEye.png"
+    }, {
+      image: "images/yellowOneEye.png"
+    }, {
+      image: "images/yellowTwoeye.png"
+    }, {
+      image: "images/yellowThreeEye.png"
+    }]
 
-  $scope.getRandomCreature = function(){
-    return Math.floor((Math.random()*10)+1)
-  }
+  $scope.children =[{
+      image: "images/redOneEye.png"
+    }, {
+      image: "images/redTwoEye.png"
+    }, {
+      image: "images/redThreeEye.png"
+    }, {
+      image: "images/blueOneEye.png"
+    }, {
+      image: "images/blueTwoEye.png"
+    }, {
+      image: "images/blueThreeEye.png"
+    }, {
+      image: "images/yellowOneEye.png"
+    }, {
+      image: "images/yellowTwoeye.png"
+    }, {
+      image: "images/yellowThreeEye.png"
+    }]
+
+$scope.getRandomParent = function() {
+
+  var randomNumber = Math.floor((Math.random() * $scope.parents.length))
+  var image = $scope.parents[randomNumber].image
+  console.log(image);
+  $scope.currentImage = image
+
+}
+$scope.getRandomParent()
+
 })

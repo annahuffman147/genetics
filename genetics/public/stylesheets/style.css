@@ -15,11 +15,13 @@ a {
 .parent1{
   background-color: brown;
   width: 50%;
+  height: 50px;
   display: flex;
 }
 
 .parent2{
   background-color: blue;
   width: 50%;
+  height: 50px;
   display: flex;
 }
